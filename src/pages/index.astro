@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+	<main>
+		<div class="top">
+			<div class="containts">
+				<h1> YUSAMAのおうち</h1>
+				<h3>なんとなくのゆるふわほーむぺーじ</h3>
+			</div>
+		</div>
+		<div class="about" id="about">
+			<div class="containts">
+				<h1>About me</h1>
+				<p>最近はVRChatで生活している人(?)です</p>
+				<p>その昔はRTAとかやってました。今でもごくまれにやってます。</p>
+				<br>
+				<p>あとはこのページみたいなちょっとしたプログラムなら書くこともできます。</p>
+				<p>(HTMLはプログラムじゃないというツッコミはさておき)</p>
+				<br>
+				<p>基本的にVRChatではいろんなところをふらふらしてます。</p>
+				<p>あと限界ギリギリまで活動するのでいろんなとこで寝落ちしてます。</p>
+				<br>
+				<h1>About this page</h1>
+				<p>このページはなんとなくのノリと勢いで作ったので運用は未定です。</p>
+				<br>
+				<p>ただブログとかはやってみたいなぁと思ってます。</p>
+				<p>noteとかqiitaとか使ってもいいんですけど個人サイトのブログって好きなんですよね。</p>
+				<br>
+				<p>まぁやりたいことをやっていく砂場のような運用をしています。</p>
+			</div>
+		</div>
+		<div class="links" id="links">
+			<div class="containts">
+				<h1>Links</h1>
+				<a href="https://twitter.com/YUSAMA_RTA"><h3>X(Twitter)</h3></a>
+				<p>いろいろつぶやいてます。</p>
+				<p>とはいいつつ見てるだけの方が多いです。</p>
+				<br>
+				<a href="https://www.youtube.com/@yusama18"><h3>Youtube</h3></a>
+				<p>過去のRTAの動画などが置いてあります。</p>
+				<p>現在はあまり運用していません。</p>
+				<br>
+				<a href="https://www.twitch.tv/yusama125718"><h3>Twitch</h3></a>
+				<p>配信する時は基本ここ(でやってました)</p>
+				<p>Youtubeと同じく現在はあまり運用していません</p>
+				<br>
+				<a href="https://www.speedrun.com/ja-JP/users/YUSAMA"><h3>Speedrun.com</h3></a>
+				<p>RTAの記録集積サイトです。</p>
+				<p>昔の記録たちがここに集まってます。</p>
+				<br>
+				<a href="https://github.com/yusama125718"><h3>GitHub</h3></a>
+				<p>プログラムの成果物を置いてます。</p>
+				<p>なんかいろいろ書いてます</p>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.top{
+		height: calc(100vh - 80px);
+		width: 100vw;
+		background-image: url("../assets/backimg.png");
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+	}
+	.about{
+		background: #aee4fd;
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	.links{
+		background: #639cb6;
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		text-align: center;
+	}
+	.containts{
+		padding: 30px 20px;
+	}
+</style>

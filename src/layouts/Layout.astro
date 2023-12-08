@@ -1,0 +1,74 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/png" href="../public/yusama.png">
+		<title>{title} - yusama.net</title>
+	</head>
+	<body>
+		<div class="header">
+			<a class="title" href="/">yusama.net</a>
+			<nav class="nav">
+				<a class="link" href="/#about">about</a>
+				<a class="link" href="/#links">links</a>
+			</nav>
+		</div>
+		<div class="container">
+			<slot />
+			<div class="footer">
+				<p>© YUSAMA 2023</p>
+			</div>
+		</div>
+	</body>
+</html>
+<style is:global>
+	body{
+		margin: 0;
+	}
+	.header{
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 80px;
+		position: sticky;
+		display: flex;
+		background: linear-gradient(to left top, rgb(0, 204, 204), rgb(146, 255, 255));
+	}
+	.title{
+		color: black;
+		text-decoration: none;
+		font-size: 50px;
+	}
+	.nav{
+		position: fixed;
+		right: 0;
+		width: auto;
+		text-align: right;
+		font-size: 30px;
+		margin: 30px 10px 0 0;
+	}
+	.link{
+		color: black;
+		margin-right: 10px;
+		text-decoration: none;
+	}
+	.container{
+		overflow-x: hidden;
+		overflow-y: scroll;
+		height: calc(100vh - 80px);
+		width: 100vw;
+	}
+	.footer{
+		color: white;
+		background-color: black;
+		padding: 20px 20px;
+	}
+</style>
