@@ -4,72 +4,40 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import '../assets/style/style.css';
 ---
 
 <!doctype html>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/png" href="../public/yusama.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="../public/yusama.webp">
 		<title>{title} - ゆさまのおうち</title>
 	</head>
 	<body>
-		<div class="header">
-			<a class="title" href="/">yusama.net</a>
-			<nav class="nav">
-				<a class="link" href="/#about">about</a>
-				<a class="link" href="/#links">links</a>
-				<a class="link" href="/playground">遊び場</a>
-			</nav>
-		</div>
+		<div class="logo"></div>
+			<div class="nav_back"></div>
+      <div class="nav">
+				<span class="drawer_back"></span>
+				<input id="drawer_input" class="drawer_hidden" type="checkbox">
+				<label for="drawer_input" class="drawer_open"><span></span></label>
+				<nav class="nav_content">
+					<h2>サイドバー</h2>
+					<ul class="nav_list">
+						<li class="nav_item"><a href="">メニュー1</a></li>
+						<li class="nav_item"><a href="">メニュー2</a></li>
+						<li class="nav_item"><a href="">メニュー3</a></li>
+					</ul>
+				</nav>
+      </div>
 		<div class="container">
 			<slot />
-			<div class="footer">
-				<p>© YUSAMA 2024</p>
-			</div>
+		</div>
+		<div class="footer">
+			<p>© YUSAMA 2025</p>
 		</div>
 	</body>
 </html>
-<style is:global>
-	body{
-		margin: 0;
-	}
-	.header{
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 80px;
-		position: sticky;
-		display: flex;
-		background: linear-gradient(to left top, rgb(0, 204, 204), rgb(146, 255, 255));
-	}
-	.title{
-		color: black;
-		text-decoration: none;
-		font-size: 50px;
-	}
-	.nav{
-		position: fixed;
-		right: 0;
-		width: auto;
-		text-align: right;
-		font-size: 30px;
-		margin: 30px 10px 0 0;
-	}
-	.link{
-		color: black;
-		margin-right: 10px;
-		text-decoration: none;
-	}
-	.container{
-		overflow-x: hidden;
-		overflow-y: scroll;
-		height: calc(100vh - 80px);
-		width: 100vw;
-	}
-	.footer{
-		color: white;
-		background-color: black;
-		padding: 20px 20px;
-	}
-</style>

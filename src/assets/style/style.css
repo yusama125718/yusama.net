@@ -1,0 +1,205 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #FFECDA;
+  width: 100%;
+  height: 100%;
+  box-sizing:border-box;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+h1{
+  font-size: 64px;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2{
+  font-size: 48px;
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title{
+  color: black;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.nav{
+  position: fixed;
+  right: 0;
+  width: auto;
+  text-align: right;
+  font-size: 30px;
+  margin: 30px 10px 0 0;
+}
+
+.link{
+  color: black;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.container{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footer{
+  color: white;
+  background-color: black;
+  height: 100px;
+  text-align: center;
+  position: relative;
+
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: 'Zen Kaku Gothic New';
+  }
+}
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-regular {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-rounded-1c-bold {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.logo {
+  font-size: 24px;
+}
+
+/* ハンバーガーメニュー */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+.drawer_back {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 90px;
+  width: 90px;
+  z-index: 101;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 20px;
+  z-index: 102;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #D9D9D9;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  transition: .5s;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_content {
+  width: 700px;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #FFECDA;
+  transition: .5s;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+.nav_item a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;
+}
+
+/* ハンバーガーメニュー終わり */
