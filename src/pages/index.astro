@@ -1,69 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Base.astro';
 ---
 
 <Layout title="Home">
 	<main>
 		<div class="top">
-			<div class="containts">
+			<div class="title">
 				<h1> YUSAMAのおうち</h1>
-				<h3>なんとなくのゆるふわほーむぺーじ</h3>
 			</div>
 		</div>
-		<div class="about" id="about">
-			<div class="containts">
-				<h2>About me</h1>
+		<div class="section" id="profile">
+			<div class="section-title">
+				<h2>Profile</h2>
+			</div>
+			<div class="section-content">
+				<p>名前：YUSAMA / yusama125718（読み：ゆさま）</p>
+				<br>
+				<p>出身：島根県</p>
+				<br>
+				<p>年齢：18（2006年3月29日生）</p>
+			</div>
+		</div>
+		<div class="section" id="about">
+			<div class="section-title">
+				<h2>About me</h2>
+			</div>
+			<div class="section-content">
 				<p>最近はVRChatで生活している人(?)です</p>
 				<p>その昔はRTAとかやってました。今でもごくまれにやってます。</p>
 				<br>
-				<p>あとはこのページみたいなちょっとしたプログラムなら書くこともできます。</p>
-				<p>(HTMLはプログラムじゃないというツッコミはさておき)</p>
+				<p>実はちょこっとプログラムが書けるエンジニアです。</p>
+				<p>趣味でもお仕事でも書いてます。エンジニアとしてのプロフィールは<a href="/engineer">こちら</a></p>
 				<br>
 				<p>基本的にVRChatではいろんなところをふらふらしてます。</p>
-				<p>あと限界ギリギリまで活動するのでいろんなとこで寝落ちしてた時期もありました。（過去形）</p>
+				<p>あと限界ギリギリまで活動するのでいろんなとこで寝落ちしてるかも。</p>
 				<br>
-				<h2>About this page</h1>
-				<p>このページはなんとなくのノリと勢いで作ったので運用は未定です。</p>
-				<br>
-				<p>ただブログとかはやってみたいなぁと思ってます。</p>
-				<p>noteとかqiitaとか使ってもいいんですけど個人サイトのブログって好きなんですよね。</p>
-				<br>
-				<p>まぁやりたいことをやっていく砂場のような運用をしています。</p>
 			</div>
 		</div>
-		<div class="links" id="links">
-			<div class="containts">
+		<div class="section" id="about">
+			<div class="section-title">
+				<h2>About this page</h2>
+			</div>
+			<div class="section-content">
+				<p>ノリで作ったページなので特に意味はないです。</p>
+				<p>作ったものをなんとなくで置いています。</p>
+			</div>
+		</div>
+		<div class="section" id="links">
+			<div class="section-title">
 				<h2>Links</h1>
+			</div>
+			<div class="section-content">
 				<a href="/playground"><h3>遊び場</h3></a>
-				<p>気になった技術とかで遊んでます。</p>
-				<p>一応公開するかというノリで作りました。</p>
+				<p>遊びで作ったHTMLを置いてます。</p>
+				<p>なんか増えるかも。</p>
 				<br>
 				<a href="https://twitter.com/YUSAMA_RTA"><h3>X(Twitter)</h3></a>
-				<p>いろいろつぶやいてます。</p>
-				<p>とはいいつつ見てるだけの方が多いです。</p>
+				<p>色々呟いてます。見てるだけなことも多いですが。</p>
 				<br>
 				<a href="https://www.youtube.com/@yusama18"><h3>Youtube</h3></a>
-				<p>過去のRTAの動画などが置いてあります。</p>
-				<p>現在はあまり運用していません。</p>
-				<br>
-				<a href="https://www.twitch.tv/yusama125718"><h3>Twitch</h3></a>
-				<p>配信する時は基本ここ(でやってました)</p>
-				<p>Youtubeと同じく現在はあまり運用していません</p>
-				<br>
-				<a href="https://www.speedrun.com/ja-JP/users/YUSAMA"><h3>Speedrun.com</h3></a>
-				<p>RTAの記録集積サイトです。</p>
-				<p>昔の記録たちがここに集まってます。</p>
+				<p>昔RTAやっていた頃の動画があります。現在はあまり動いてません。</p>
 				<br>
 				<a href="https://github.com/yusama125718"><h3>GitHub</h3></a>
-				<p>プログラムの成果物を置いてます。</p>
-				<p>なんかいろいろ書いてます</p>
+				<p>趣味で書いたコード達はここにいます。</p>
 			</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-	.top{
+	.top {
 		height: 100vh;
 		width: 100%;
 		background-image: url("../assets/images/backimg.webp");
@@ -71,5 +77,27 @@ import Layout from '../layouts/Layout.astro';
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+	}
+
+	.title {
+		padding-left: 90px;
+		padding-top: 150px;
+		display: flex;
+
+		h1 {
+			padding: 5px 15px;
+			color: #FFF;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	.section{
+		padding: 150px 100px;
+	}
+
+	.section-content {
+		padding: 30px 50px;
+		font-size: 28px;
+		font-weight: 700;
 	}
 </style>
