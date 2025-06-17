@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Base.astro';
+---
+
+<Layout title="名刺">
+  <main class="meishi">
+    <h1>YUSAMA</h1>
+    <div class="links">
+      <a href="https://twitter.com/YUSAMA_RTA">X(Twitter)</a>
+      <a href="https://www.youtube.com/@yusama18">Youtube</a>
+      <a href="https://github.com/yusama125718">GitHub</a>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+
+  .meishi {
+    height: calc(100vh - 100px);
+    background-image: url('../../assets/images/backimg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  h1 {
+    padding: 5px 15px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .links a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .links a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
